@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cards-Using HTML</title>
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+          body{background-color: #212421;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+          #cardsBox{
+               margin-top: 150px;
+               width: 250px;
+               height: 290px;
+               border: 2px solid whitesmoke;
+               background-color: whitesmoke;
+               border-radius: 10px;
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+               /* justify-content: center; */
+               align-items: center;
+          }
+          .Img{
+               width: 90%;
+               height: 70%;
+               background-color: #212421;
+               margin: 5px 2px  2px;
+               border-radius: 20px;
+          }
+          .name{
+               width: 100px;
+               height: 50px;
+               background-color: #212421;
+               padding: 10px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 15px;
+          }
+     </style>
+</head>
+<body>
+     <div id="cardsBox">
+          <div class="Img">
+               <img src="" alt="" id="Image">
+          </div>
+          <div class="name" style="color: aliceblue;">
+               <p>Name</p>
+          </div>
+     </div>
+</body>
+<script>
+     // Image == avatar name == name
+     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+     const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log( data);
+          //   console.log(data.followers);
+          document.querySelector('#Image').src = "data.avatar_url"
+        }
+    }
+    xhr.send();
+</script>
+</html>

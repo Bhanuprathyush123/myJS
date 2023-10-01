@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+          body{
+               background-color: #212122;
+               color: whitesmoke;
+          }
+          #heading{
+               text-align: center;
+          }
+     </style>
+</head>
+<body>
+     <div id="heading">1</div>
+     <ul class="language">
+          <li>
+               JavaScript
+          </li>
+     </ul>
+</body>
+<script>
+     
+     let heading = document.querySelector('#heading')
+     heading.textContent = 'This Is A DOM Manipulation Page'
+     heading.style.padding = '20px'
+     heading.style.backgroundColor = 'black'
+     heading.style.border = '2px solid white'
+     heading.style.borderRadius = '50px'
+     heading.style.marginTop = '10px'
+     // function addlanguage(lang) {
+     //      const li = document.createElement('li');
+     //      li.innerHTML = `${lang}`
+     //      document.querySelector('.language').appendChild(li)
+     // }
+     // addlanguage('Java')
+     // addlanguage('Python')
+
+     function addingOptimized(text) {
+  const li = document.createElement('li');
+  // the above line of code is used to create the list item 
+  li.appendChild(document.createTextNode(text));
+  //and this line is used to append the text that is given
+  document.querySelector('.language').appendChild(li);
+  // this line of code is used to display the list item on to window
+}
+addingOptimized('goLang');
+addingOptimized('Java');
+addingOptimized('Python');
+
+let list = document.querySelector('.language')
+     list.style.padding = '35px'
+     list.style.listStyleType = 'box'
+     list.style.color = 'orange'
+     list.style. fontFamily = 'Impact,Charcoal,sans-serif'
+// let headingText = document.createElement('h1')
+// headingText.appendChild(document.createTextNode('This Is A DOM Manipulation Page'))
+// document.querySelector('.heading').appendChild(headingText)
+
+     let lastChild = document.querySelector('li:last-child')
+     // secondChild.textContent = 'Mojo'/secondChild.innerHTML = 'Mojo' general version
+
+     // Optimized version
+     const newSecondLi = document.createElement('li')
+     newSecondLi.textContent = 'Mojo'
+     lastChild.replaceWith(newSecondLi)
+
+     // removing 
+</script>
+</html>

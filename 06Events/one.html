@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Events</title>
+     <style>
+          *{
+               padding: 10px;
+          }
+          ul li{
+               list-style: none;
+          }
+     </style>
+</head>
+<body>
+     <ul>
+          <li>
+               <a href="">
+                    <img src="https://images.pexels.com/photos/4321085/pexels-photo-4321085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="sunset" alt="Sunset" width="200" height="200">
+               </a>
+          </li>
+          <li>
+               <a href="">
+                    <img src="https://images.pexels.com/photos/575386/pexels-photo-575386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="car" alt="Mustang" width="200" height="200">
+               </a>
+          </li>
+          <li>
+               <a href="">
+                    <img src="https://images.pexels.com/photos/23547/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="mustang" alt="natue" width="200" height="200">
+               </a>
+          </li>
+          <li>
+               <a href="">
+                    <img src="https://images.pexels.com/photos/2896668/pexels-photo-2896668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" id="landscap" alt="landscape" width="200" height="200">
+               </a>
+          </li>
+          <li>
+               <a href="https://google.com" id="google">Google</a>
+          </li>
+     </ul>
+</body>
+<script>
+     // document.getElementById('car').onclick = ()=>{
+     //      alert("It's A Mustang Car")
+     // }
+
+     document.getElementById('car').addEventListener('mouseover', function(event){
+         event.target.style.border = '2px solid black';
+         event.target.style.borderRadius = '20px';
+         event.target.style.rotate = '2deg'
+     })
+
+     /* Important Topics Of Events
+                                   type, timeStamp, defaultPrevented, 
+                                   target, toElement, srcElement, currentTarget
+                                   clientX, clientY, screenX, screenY, (keycodes=> deprecated, new Object is Key)
+     */
+    
+</script>
+</html>

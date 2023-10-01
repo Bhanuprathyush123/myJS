@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>APIS</title>
+</head>
+<body>
+     API Requests
+</body>
+<script>
+     let apiUrl = 'https://randomuser.me/api/';
+     const apiRequest = new XMLHttpRequest();
+     apiRequest.open('GET',apiUrl)
+     apiRequest.onreadystatechange = function(){
+          console.log(apiRequest.readyState);
+          if(apiRequest.readyState === 4) {
+               let data = JSON.parse(this.responseText);
+               console.log("This is API :", data);
+               console.log(data.info.seed);
+          }
+     }
+     apiRequest.send()
+</script>
+</html>

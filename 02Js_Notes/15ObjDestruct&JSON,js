@@ -1,0 +1,10 @@
+let course = {
+     courseName: "DSA",
+     coursePrice: "1201",
+     courseIntrust : "Prathyush"
+}
+
+// De-structure
+
+const { courseName : Name } = course
+console.log(Name); 
